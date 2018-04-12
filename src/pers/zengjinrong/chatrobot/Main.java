@@ -4,6 +4,12 @@ import pers.zengjinrong.chatrobot.util.PostUtil;
 
 import java.util.Scanner;
 
+/**
+ * 基于JAVA与图灵机器人API的聊天自动回复机器人实现
+ *
+ * @author ZengJinRong
+ * @version 1.1
+ */
 public class Main {
 
     public static void main(String[] args) {

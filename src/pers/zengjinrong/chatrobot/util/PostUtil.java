@@ -9,6 +9,12 @@ import com.google.gson.Gson;
 import pers.zengjinrong.chatrobot.bean.MessageReceived;
 import pers.zengjinrong.chatrobot.bean.MessageToSend;
 
+/**
+ * 用于消息的发送与接收相关操作
+ *
+ * @author ZengJinRong
+ * @version 1.1
+ */
 public class PostUtil {
     private static final String URL_STRING = "http://www.tuling123.com/openapi/api";
     private static URL url;
@@ -39,21 +45,7 @@ public class PostUtil {
         String jsonRes = post(url, PostParams);
         MessageReceived messageReceived = gson.fromJson(jsonRes, MessageReceived.class);
 
-        //分析消息标识码，返回结果
-        switch (messageReceived.getCode()) {
-            case 100000:
-                return messageReceived.getText();
-            case 40001:
-                return "参数key错误";
-            case 40002:
-                return "请求内容info为空";
-            case 40004:
-                return "当天请求次数已使用完";
-            case 40007:
-                return "数据格式异常";
-            default:
-                return messageReceived.getText();
-        }
+        return messageReceived.getText();
     }
 
     /**
