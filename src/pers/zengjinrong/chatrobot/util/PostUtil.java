@@ -13,7 +13,7 @@ import pers.zengjinrong.chatrobot.bean.MessageToSend;
  * 用于消息的发送与接收相关操作
  *
  * @author ZengJinRong
- * @version 1.1
+ * @version 1.2
  */
 public class PostUtil {
     private static final String URL_STRING = "http://www.tuling123.com/openapi/api";
@@ -58,7 +58,7 @@ public class PostUtil {
     private static String post(URL url, String params) {
         OutputStreamWriter writer = null;
         BufferedReader reader = null;
-        String response = "";
+        StringBuilder response=new StringBuilder();
         try {
             //建立连接
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -81,7 +81,7 @@ public class PostUtil {
             String lines;
             while ((lines = reader.readLine()) != null) {
                 lines = new String(lines.getBytes(), "utf-8");
-                response += lines;
+                response.append(lines);
             }
             reader.close();
 
@@ -103,7 +103,7 @@ public class PostUtil {
                 e.printStackTrace();
             }
         }
-        return response;
+        return response.toString();
     }
 
 }
