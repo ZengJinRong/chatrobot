@@ -18,14 +18,14 @@ public class MessageToSend {
         if (key == null) {
             //从配置文件读取APIKey
             try {
-                InputStream inputStream=MessageToSend.class.getResourceAsStream("/chatrobot.properties");
+                InputStream inputStream=MessageToSend.class.getClassLoader().
+                        getResourceAsStream("chatrobot.properties");
                 Properties properties=new Properties();
                 properties.load(inputStream);
                 key=properties.getProperty("apikey");
             }catch (IOException e){
                 e.printStackTrace();
             }
-
         }
         this.info = info;
     }
