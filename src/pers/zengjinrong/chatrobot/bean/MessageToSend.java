@@ -1,7 +1,5 @@
 package pers.zengjinrong.chatrobot.bean;
 
-import pers.zengjinrong.chatrobot.Main;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
