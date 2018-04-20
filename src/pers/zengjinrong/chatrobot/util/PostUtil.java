@@ -77,10 +77,9 @@ public class PostUtil {
             writer.flush();
 
             //读取响应
-            reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            reader = new BufferedReader(new InputStreamReader(conn.getInputStream(),"utf-8"));
             String lines;
             while ((lines = reader.readLine()) != null) {
-                lines = new String(lines.getBytes(), "utf-8");
                 response.append(lines);
             }
             reader.close();
