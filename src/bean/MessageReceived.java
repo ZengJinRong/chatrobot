@@ -1,4 +1,4 @@
-package pers.zengjinrong.chatrobot.bean;
+package bean;
 
 /**
  * Bean 用于接收消息的JSON解析

@@ -1,13 +1,17 @@
-package pers.zengjinrong.chatrobot.util;
+package bean.util;
 
-import java.io.*;
+import bean.MessageReceived;
+import bean.MessageToSend;
+import com.google.gson.Gson;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
-import com.google.gson.Gson;
-import pers.zengjinrong.chatrobot.bean.MessageReceived;
-import pers.zengjinrong.chatrobot.bean.MessageToSend;
+import java.util.Scanner;
 
 /**
  * 用于消息的发送与接收相关操作
