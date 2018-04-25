@@ -1,4 +1,4 @@
-package bean.util;
+package util;
 
 import bean.MessageReceived;
 import bean.MessageToSend;
@@ -11,7 +11,6 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Scanner;
 
 /**
  * 用于消息的发送与接收相关操作

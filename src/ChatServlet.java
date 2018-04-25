@@ -1,4 +1,4 @@
-import bean.util.PostUtil;
+import util.PostUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
