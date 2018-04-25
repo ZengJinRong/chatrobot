@@ -1,2 +1,2 @@
 # chatrobot
-A simple Chat-Robot based on Turing Robot API implemented by Java.
+A simple Chat-Robot based on Turing Robot API implemented by JavaWeb.
